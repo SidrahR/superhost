@@ -25,9 +25,7 @@ function Sidebar({ children }: { children: React.ReactNode }) {
                 width={isOpen ? "120" : "30"}
                 height={isOpen ? "70" : "30"}
                 alt="logo"
-                className={` ${
-                  isOpen ? "" : "mt-2"
-                } transition-all duration-200 `}
+                className={` ${isOpen ? "" : "mt-2"} `}
               />
             </Link>
 
