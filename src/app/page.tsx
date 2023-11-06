@@ -1,8 +1,14 @@
 import Header from "@/components/Header";
+import MobileHeader from "@/components/MobileHeader";
 export default function Home() {
   return (
-    <main className="bg-gray-100 min-h-screen">
-      <Header />
+    <main>
+      <div className="min-h-screen hidden lg:block">
+        <Header currentPage="Home" />
+      </div>
+      <div className="block lg:hidden">
+        <MobileHeader currentPage="Home" />
+      </div>
     </main>
   );
 }

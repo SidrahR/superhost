@@ -1,12 +1,18 @@
 import Header from "@/components/Header";
+import MobileHeader from "@/components/MobileHeader";
 
 const PageDynamic = ({ params }: { params: { pageName: string } }) => {
   const currentPage = params.pageName;
   return (
     <div className="">
-      <Header currentPage={currentPage}></Header>
+      <div className="hidden lg:block">
+        <Header currentPage={currentPage}></Header>
+      </div>
+      <div className="block lg:hidden">
+        <MobileHeader currentPage={currentPage} />
+      </div>
       <h1 className="uppercase text-center text-2xl my-6">{currentPage}</h1>
-      <p className="w-2/3 mx-auto">
+      <p className="w-[80%] lg:w-2/3 mx-auto mb-10">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
         laudantium perspiciatis ea eaque voluptates adipisci sit aut enim
         accusamus, fugit eius ipsa voluptatum voluptatem amet rerum, maxime

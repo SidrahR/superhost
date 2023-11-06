@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
-import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Sidebar>{children}</Sidebar>
+      <body className={`${inter.className} bg-[#f2f2f2]`}>
+        <div className="hidden lg:block">
+          <Sidebar>{children}</Sidebar>
+        </div>
+        <div className="block lg:hidden">{children}</div>
       </body>
     </html>
   );
