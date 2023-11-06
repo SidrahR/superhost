@@ -9,6 +9,9 @@ export default function Home() {
       <div className="block lg:hidden">
         <MobileHeader currentPage="Home" />
       </div>
+      <div className="text-lg text-center fixed -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        Welcome to superhost dashboard
+      </div>
     </main>
   );
 }

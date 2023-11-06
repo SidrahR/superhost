@@ -12,8 +12,8 @@ function Sidebar({ children }: { children: React.ReactNode }) {
     <div>
       <div className="flex">
         <div
-          className={`fixed flex flex-col justify between h-screen py-3 pl-4
-          transition-all duration-700 ${isOpen ? "w-40" : "w-20"}
+          className={`fixed flex flex-col justify between h-screen py-3 pl-4 transition-all duration-500
+           ${isOpen ? "w-40" : "w-20"}
           `}
         >
           {/* Sidebar */}
@@ -25,7 +25,9 @@ function Sidebar({ children }: { children: React.ReactNode }) {
                 width={isOpen ? "120" : "30"}
                 height={isOpen ? "70" : "30"}
                 alt="logo"
-                className={` ${isOpen ? "" : "mt-2"}`}
+                className={` ${
+                  isOpen ? "" : "mt-2"
+                } transition-all duration-200 `}
               />
             </Link>
 
@@ -48,9 +50,7 @@ function Sidebar({ children }: { children: React.ReactNode }) {
         </div>
       </div>
       <main
-        className={`transition-all transform duration-700 ${
-          isOpen ? "ml-40" : "ml-20"
-        }`}
+        className={`${isOpen ? "ml-40" : "ml-20"} transition-all duration-500`}
       >
         {children}
       </main>

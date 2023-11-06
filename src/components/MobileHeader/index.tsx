@@ -27,22 +27,24 @@ const MobileHeader = ({ currentPage }: { currentPage: string }) => {
       <button className="capitalize" onClick={toggleModal}>
         {currentPage}
         <span>
-          <AiOutlineDown className="ml-2 text-[0.9rem] inline-block" />
+          <AiOutlineDown
+            className={`ml-2 text-[0.9rem] inline-block duration-200 ${
+              isModalOpen ? "rotate-180" : "rotate-0"
+            } `}
+          />
         </span>
       </button>
       <LogoDropdown />
 
       <div
-        className={`fixed top-20 left-0 pb-20 w-full min-h-full max-h-screen overflow-y-auto transition-all transform duration-500 ${
+        className={`fixed top-20 left-0 pb-36 w-full min-h-full max-h-screen overflow-y-auto transition-all transform duration-500 ${
           isModalOpen
             ? "translate-y-0 opacity-100"
             : "translate-y-full opacity-0"
         }`}
       >
         {/* Modal content */}
-        <div className="">
-          <PageList /> {/* Render your list of pages here */}
-        </div>
+        <PageList />
       </div>
     </div>
   );

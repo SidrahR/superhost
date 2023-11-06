@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 export const PageList = () => {
   const currentPath = usePathname();
   return (
-    <div className="w-full h-full lg:h-[75vh] overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thumb-gray-400 scrollbar-track-gray-200 px-5 lg:px-0 bg-[#f2f2f2]">
+    <div className=" z-50 w-full max-h-screen lg:h-[75vh] overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thumb-gray-400 scrollbar-track-gray-200 px-5 lg:px-0 bg-[#f2f2f2]">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1 sm:gap-x-3">
         {pages_data.map((page: PagesData) => (
           <div
